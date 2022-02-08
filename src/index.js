@@ -7,7 +7,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { clientOrigins, serverPort } = require('./config/env.dev');
 
-const { messagesRouter } = require('./messages/messages.router');
+//const { messagesRouter } = require('./messages/messages.router');
+const { ordersRouter } = require('./orders/orders.router');
 
 /**
  * App Variables
@@ -26,7 +27,8 @@ app.use(express.json());
 
 app.use('/api', apiRouter);
 
-apiRouter.use('/messages', messagesRouter);
+//apiRouter.use('/messages', messagesRouter);
+apiRouter.use('/orders', ordersRouter);
 
 app.use(function (err, req, res, next) {
   console.log(err);
