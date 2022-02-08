@@ -37,7 +37,7 @@ const makeOrder = async (itemId, userId) => {
   await auth0managementClient.updateUserMetadata({ id: userId }, newMeta);
 
   return {
-    message: 'Order made',
+    message: `Your order of Pizza ${itemId} has been received!`,
   };
 };
 
