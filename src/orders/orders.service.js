@@ -18,7 +18,7 @@ const makeOrder = async (itemId, userId) => {
 
   const user = await auth0managementClient.getUser({ id: userId });
   console.log(user.user_metadata);
-  record = { item: itemId, timestamp: new Date().toISOString() };
+  const record = { item: itemId, timestamp: new Date().toISOString() };
 
   let newMeta;
   if (user.user_metadata) {
