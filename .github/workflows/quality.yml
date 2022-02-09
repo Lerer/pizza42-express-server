@@ -17,5 +17,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        sonar.projectKey: Lerer_pizza42-express-server
-        sonar.organization: Lerer
+      with:
+        args: >
+          -Dsonar.organization=Lerer
+          -Dsonar.projectKey=Lerer_pizza42-express-server
