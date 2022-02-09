@@ -68,13 +68,13 @@ You'll need to register **and authorize** the API from the above section and as 
 - When you authorize the Management API, please enable the `read:users` and the `update:users` permissions.
 
 <p align="center">
-  <img src="https://github.com/Lerer/pizza42-express-server/blob/master/media/m2m-app.png?raw=true" width="700px" alt="Machine to Machine Application"/>
+  <img src="https://raw.githubusercontent.com/Lerer/pizza42-express-server/main/media/m2m-app.PNG" width="700px" alt="Machine to Machine Application"/>
 </p>
 
 Switch to the `Application` Settings tab and copy the values of `Client ID` and `Client Secret` to `SERVER_APP_AUTH0_CLIENT_ID` and `SERVER_APP_AUTH0_CLIENT_SECRET`
 
 <p align="center">
-  <img src="https://github.com/Lerer/pizza42-express-server/blob/master/media/m2m-settings.png?raw=true" width="700px" alt="Machine to Machine Application settings"/>
+  <img src="https://raw.githubusercontent.com/Lerer/pizza42-express-server/main/media/m2m-settings.PNG?raw=true" width="700px" alt="Machine to Machine Application settings"/>
 </p>
 
 ---
