@@ -1,6 +1,7 @@
 var ManagementClient = require('auth0').ManagementClient;
 
 const { clientId, clientSecret, domain } = require('../config/env.dev');
+const xss = require('xss');
 
 /**
  * Orders Methods
@@ -37,7 +38,7 @@ const makeOrder = async (itemId, userId) => {
   await auth0managementClient.updateUserMetadata({ id: userId }, newMeta);
 
   return {
-    message: `Your order of Pizza ${itemId} has been received!`,
+    message: xss(`Your order of Pizza ${itemId} has been received!`),
   };
 };
 
