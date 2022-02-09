@@ -1,7 +1,7 @@
 on:
   # Trigger analysis when pushing in master or pull requests, and when creating
   # a pull request.
-  push:
+  repository_dispatch:
    
 name: Main Workflow
 jobs:
