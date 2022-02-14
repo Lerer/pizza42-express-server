@@ -26,8 +26,11 @@ const ordersRouter = express.Router();
  * for controling scope add: jwtAuthz(['pizza:order']),
  */
 ordersRouter.post('/', checkJwt, async (req, res) => {
-  const { itemId, userId } = req.body;
-  const message = await makeOrder(itemId, userId);
+  if (!req.user) {
+    return res.status(401).send({ message: 'Missing user in the request' });
+  }
+  const { itemId } = req.body;
+  const message = await makeOrder(itemId, req.user.sub);
   console.log(message);
   res.status(200).send(message);
 });
